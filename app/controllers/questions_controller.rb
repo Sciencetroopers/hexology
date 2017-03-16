@@ -1,5 +1,6 @@
 class QuestionsController < ApplicationController
-
+  before_action :authenticate_user!
+  before_action :authenticate_admin
   before_action :find_question, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -47,5 +48,9 @@ class QuestionsController < ApplicationController
 
   def find_question
     @question = Question.find(params[:id])
+  end
+
+  def authenticate_admin
+    redirect_to root_path unless current_user.admin == true
   end
 end
