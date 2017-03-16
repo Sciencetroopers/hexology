@@ -6,6 +6,6 @@
 
 %h3 Question:
 %p=simple_format(@question.question)
-%p
-  Answer:
-  =@question.answer
+= form_tag(:action => "check") do
+  = password_field_tag :answer
+  = submit_tag("Submit Answer")
