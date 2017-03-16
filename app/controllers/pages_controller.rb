@@ -2,8 +2,12 @@ class PagesController < ApplicationController
   before_action :authenticate_user!
 
   def question
-    @q_id = current_user.question_id
-    @question = Question.find(@q_id)
+    if current_user.question_id == 16
+      redirect_to pages_winner_path
+    else
+      @q_id = current_user.question_id
+      @question = Question.find(@q_id)
+    end
   end
 
   def check
