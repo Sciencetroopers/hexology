@@ -7,9 +7,6 @@ class QuestionsController < ApplicationController
     @questions = Question.all.order('created_at ASC')
   end
 
-  def show
-  end
-
   def new
     @question = Question.new
   end
