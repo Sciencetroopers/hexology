@@ -1,4 +1,5 @@
--if current_user.question_id == 16
-  %h1 YOU HAVE WON MON AMI!!!
--else
-  %h1 YOU TRAITOR, YOU (>.<)
+.row
+  -if current_user.question_id == 16
+    %h1 YOU HAVE WON MON AMI!!!
+  -else
+    %h1 YOU TRAITOR, YOU (>.<)

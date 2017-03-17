@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:contact]
 
   def question
     if current_user.question_id == 16
@@ -24,6 +24,8 @@ class PagesController < ApplicationController
     else
       render 'question'
     end
+  end
 
+  def contact
   end
 end

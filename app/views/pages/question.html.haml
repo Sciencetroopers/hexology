@@ -1,11 +1,7 @@
-
-%p= link_to "Sign_out", destroy_user_session_path, method: :delete
-%p= link_to "Rules", pages_rules_path
-%p= link_to "Contact Us", pages_contact_path
-%br
-
-%h3 Question:
-%p=simple_format(@question.question)
-= form_tag(:action => "check") do
-  = password_field_tag :answer
-  = submit_tag("Submit Answer")
+.row
+  %h1 Question:
+  %p=simple_format(@question.question)
+.row
+  = form_tag(:action => "check") do
+    = password_field_tag :answer
+    = submit_tag("Submit Answer", class: "button")

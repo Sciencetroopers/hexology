@@ -1,5 +1,7 @@
-%h1 Welcome#index
-%p Find me in app/views/welcome/index.html
-
-- if !user_signed_in? 
-  =link_to "Sign In", new_user_session_path
+.row 
+  .hero_text-box
+    %h1 Hexology
+    %p An online scavenger hunt that bends the rules of logic,<br> and explores the depths of knowledge on the internet
+    - if !user_signed_in?
+      =link_to "Sign In", new_user_session_path, class: "button"
+      =link_to "Sign Up", new_user_registration_path, class: "button"
