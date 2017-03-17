@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_action :authenticate_user!, except: [:contact]
+  before_action :authenticate_user!, except: [:contact, :rules]
 
   def question
     if current_user.question_id == 16
@@ -22,7 +22,8 @@ class PagesController < ApplicationController
         redirect_to pages_question_path
       end
     else
-      render 'question'
+      flash[:notice] = "Wrong Answer. Try Again."
+      redirect_to pages_question_path
     end
   end
 

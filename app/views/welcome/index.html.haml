@@ -1,7 +1,16 @@
-.row 
-  .hero_text-box
+.row.hero-text-box
+  .col-md-6
     %h1 Hexology
-    %p An online scavenger hunt that bends the rules of logic,<br> and explores the depths of knowledge on the internet
-    - if !user_signed_in?
-      =link_to "Sign In", new_user_session_path, class: "button"
-      =link_to "Sign Up", new_user_registration_path, class: "button"
+    %p.hero-text
+      An
+      %span.hero-text-highlight Online Scavenger Hunt
+      that bends the rules of logic, and explores the depths of knowledge on the internet
+    .show
+      =link_to "Sign Up","#", class: "button hero-button", id: "sign-up"
+    .hide
+      =link_to "Sign In","#", class: "button hero-button", id: "sign-in"
+  .col-md-6
+    .show
+      = render 'devise/sessions/new'
+    .hide
+      = render 'devise/registrations/new'

@@ -4,27 +4,32 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Hexology
     = csrf_meta_tags
-    %link{:href => "https://fonts.googleapis.com/css?family=Sigmar+One|Special+Elite", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Sigmar+One", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Ubuntu:400,700i", :rel => "stylesheet"}/
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %header
-      %nav
-        .row
-          = image_tag('logo-white.png', class: "logo")
-          %ul.main-nav
-            %li
-              =link_to "Innovate Home", "http://www.cybonito.com/"
-            %li
-              = link_to "Rules", pages_rules_path
-            %li
-              = link_to "Contact Us", pages_contact_path
-            %li
-              = link_to "Facebook", "#", id: "f"
-            -if user_signed_in?
+    .container
+      %header
+        %nav
+          .row
+            = image_tag('logo-white.png', class: "logo")
+            %ul.main-nav
               %li
-                = link_to "Sign Out", destroy_user_session_path, method: :delete
-    .row
-      %p.notice= notice
-      %p.alert= alert
-    = yield
+                =link_to "Innovate Home", "http://www.cybonito.com/"
+              %li
+                = link_to "Rules", pages_rules_path
+              %li
+                = link_to "Contact Us", pages_contact_path
+              %li
+                = link_to "Facebook", "#", id: "f"
+              -if user_signed_in?
+                %li
+                  = link_to "Sign Out", destroy_user_session_path, method: :delete
+      .row
+        .col-md-3
+          %p.notice= notice
+          %p.alert= alert
+        .col-md-6.col-md-offset-3
+          = render 'pages/timeline'
+      = yield

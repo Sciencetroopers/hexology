@@ -1,7 +1,11 @@
-.row
-  %h1 Question:
-  %p=simple_format(@question.question)
-.row
-  = form_tag(:action => "check") do
-    = password_field_tag :answer
-    = submit_tag("Submit Answer", class: "button")
+.question
+  .row
+    .col-md-1.col-md-offset-1
+      #q Q
+    .col-md-7
+      %p=simple_format(@question.question)
+  .row
+    .col-md-6.col-md-offset-2
+      = form_tag(:action => "check") do
+        = password_field_tag :answer
+        = submit_tag("Next", class: "button")

@@ -14,3 +14,33 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+var sign_up = document.getElementById("sign-up");
+var sign_in = document.getElementById("sign-in");
+var sign_up_form = document.getElementById("sign-up-form");
+var sign_in_form = document.getElementById("sign-in-form");
+
+sign_up.addEventListener("click", function() {
+    if(sign_in_form.className==="show") {
+        sign_in_form.className="hide";
+    }
+
+    if(sign_up_form.className==="hide") {
+        sign_up_form.className = "show";
+    } else {
+        sign_up_form.className = "hide";
+    }
+
+});
+
+sign_in.addEventListener("click", function()  {
+    if(sign_up_form.className==="show") {
+        sign_up_form.className="hide";
+    }
+
+    if(sign_in_form.className==="hide") {
+        sign_in_form.className = "show";
+    } else {
+        sign_in_form.className = "hide";
+    }
+
+});

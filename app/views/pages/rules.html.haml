@@ -1,17 +1,20 @@
-.row
-  .col-md-8.col-md-offset-2
-    %h3 Rules and Regulations
-    %ul
+.row.rules
+  .col-md-6.col-md-offset-3
+    %h2 Rules and Regulations
+    %ul.rules
       %li
-        Caps and spaces are not allowed. Eg: if your answer is I am playing Hexology Hunt,
-        you will have to enter iamplayinghexologyhunt to proceed.
-      %li The answers also do not have any special characters.
-      %li Beware of the spelling you enter, Hexology can't auto correct your spellings!
+        %span.glyphicon.glyphicon-chevron-right.arrow
+        Caps and spaces are not allowed. Eg: if your answer is 'I am playing Hexology Hunt',
+        you will have to enter: 'iamplayinghexologyhunt' to proceed.
       %li
-        You are advised not to provide answers or any direct links to the answer on the forum.
-        It will lead to immediate disqualification.
+        %span.glyphicon.glyphicon-chevron-right.arrow
+        The answers do not have any special characters.
       %li
-        Ensure that you have registered with your correct email id so that
-        you get all regular updates.
+        %span.glyphicon.glyphicon-chevron-right.arrow
+        Beware of the spellings you enter, Hexology can't auto correct your spellings!
+      -# %li
+      -#   %span.glyphicon.glyphicon-chevron-right.arrow
+      -#   You are advised not to provide answers or any direct links to the answer on the forum.
+      -#   It will lead to immediate disqualification.
 
-    %p= link_to "Back", root_path
+    %p= link_to "Back", root_path, class: "button rules-button"

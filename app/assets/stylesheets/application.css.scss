@@ -15,16 +15,29 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import "font-awesome";
+
+// Custom Font
+@font-face {
+  font-family: "MODERN SANS";
+  src: url(/assets/MODERN SANS);
+}
  /*-------------------------------------*/
  /* REUSABLE COMPONENTS */
  /*-------------------------------------*/
 
- .row {
-     max-width: 1140px;
-     margin: 0 auto;
+ // .row {
+ //     max-width: 1140px;
+ //     margin: 0 auto;
+ // }
+
+
+ .hide {
+     display: none;
  }
 
+ .show {
+
+ }
 
  /*-----------BUTTTONS------------------*/
 
@@ -32,7 +45,7 @@
  .button:visited,
  input[type=submit]{
     color: whitesmoke;
-    font-family: 'Special Elite', 'Verdana', sans-serif;
+    font-family: 'Ubuntu', 'Verdana', sans-serif;
     font-size: 20px;
     font-weight: 400;
     text-rendering: optimizeLegibility;
@@ -44,7 +57,7 @@
     border-radius: 200px;
     border: 1.5px solid whitesmoke;
     color: whitesmoke;
-    margin-left: 30px;
+    // margin-right: 30px;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
  }
@@ -70,19 +83,25 @@
  body {
      background-color: #000000;
      color: whitesmoke;
-     font-family: 'Special Elite', 'Verdana', sans-serif;
-     font-size: 20px;
+     font-family: 'Ubuntu', 'Verdana', sans-serif;
+     font-size: 110%;
      font-weight: 400;
      text-rendering: optimizeLegibility;
  }
 
 body {
     color: white;
-    background-image:-webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(hero-2.jpg);
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(hero-2.jpg);
+    background-image:-webkit-linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.94)), url(hero-1.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.94), rgba(0, 0, 0, 0.94)), url(hero-1.jpg);
     height: 100vh;
     background-size: cover;
     background-position: center;
+}
+
+.hero-text-box, .question, .contact, .rules, .winner {
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background: rgba(0, 0, 0, 0.3)
 }
 
 /*-----------HEADINGS------------- ----*/
@@ -91,7 +110,7 @@ body {
 h1 {
     margin: 0;
     font-family: 'Sigmar One', 'Verdana', sans-serif;
-    font-size: 280%;
+    font-size: 350%;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -106,6 +125,7 @@ h1 {
  /*----------NAVIGATION----------------*/
 
  .main-nav {
+    //  font-family: 'MODERN SANS', 'Verdana', sans-serif;
      float: right;
      list-style: none;
      margin-top: 70px;
@@ -134,13 +154,6 @@ h1 {
  }
  /*---------FORM-----------------------*/
 
- #sign-up-form,
- #sign-in-form {
-     width: 90%;
-     margin-left: 25%;
-     margin-top: 15%;
- }
-
  input[type=text],
  input[type=password],
  input[type=email]{
@@ -151,3 +164,55 @@ h1 {
      border-radius: 3px;
      border: 1px solid #ccc;
  }
+ /*-------------------------------------*/
+/* Welcome Page */
+/*-------------------------------------*/
+.hero-text-highlight {
+  font-weight: 700;
+  font-style: italic;
+}
+.hero-text {
+  text-align: left;
+}
+.hero-button {
+  margin-left: 23%;
+}
+/*-------------------------------------*/
+/* Questions Page */
+/*-------------------------------------*/
+#q {
+    margin: 0;
+    font-family: 'Sigmar One', 'Verdana', sans-serif;
+    font-size: 400%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    display: inline-block;
+    float: left;
+    padding: 0;
+}
+
+/*-------------------------------------*/
+/* Contact-Us Page */
+/*-------------------------------------*/
+.contact-button {
+  float: right;
+}
+.contact {
+  text-align: center;
+}
+/*-------------------------------------*/
+/* Rules Page */
+/*-------------------------------------*/
+.rules-button {
+  float: right;
+}
+.rules {
+  list-style: none;
+  text-align: center;
+  li {
+    padding-top: 10px;
+  }
+}
+.arrow {
+  padding-right: 10px;
+}
