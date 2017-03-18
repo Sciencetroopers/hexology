@@ -1,12 +1,12 @@
-%h1 Questions
-%small= link_to "New", new_question_path
-%br
-- @questions.each do |question|
-  %h3 Question:
-  %p=simple_format(question.question)
-  %p
-    Answer:
-    =question.answer
-  = link_to "Edit", edit_question_path(question.id)
-  = link_to "Delete", question, method: :delete, data: {confirm: "Are you sure?"}
-  %hr
+.row
+  %h1 Questions
+  %small= link_to "New", new_question_path
+  %br
+  - @questions.each do |question|
+    %h3 Question:
+    %p=simple_format(question.question)
+    %p
+      Answer:
+      =question.answer
+    = link_to "Edit", edit_question_path(question.id)
+    %hr

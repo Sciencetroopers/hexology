@@ -31,12 +31,7 @@ class QuestionsController < ApplicationController
       render 'edit'
     end
   end
-
-  def destroy
-    @question.destroy
-    redirect_to questions_path
-  end
-
+  
   private
 
   def question_params

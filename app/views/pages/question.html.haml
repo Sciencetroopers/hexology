@@ -1,11 +1,11 @@
 .question
   .row
-    .col-md-1.col-md-offset-1
+    .col-xs-offset-2.col-xs-8.col-md-offset-2.col-md-8
       #q Q
-    .col-md-7
+    .col-xs-offset-2.col-xs-8.col-md-offset-2.col-md-8
       %p=simple_format(@question.question)
   .row
-    .col-md-6.col-md-offset-2
+    .col-xs-offset-2.col-xs-8.col-md-offset-2.col-md-8
       = form_tag(:action => "check") do
         = password_field_tag :answer
-        = submit_tag("Next", class: "button")
+        = submit_tag("Next", class: "button answer-button")

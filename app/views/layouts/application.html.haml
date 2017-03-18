@@ -2,6 +2,7 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}/
     %title Hexology
     = csrf_meta_tags
     %link{:href => "https://fonts.googleapis.com/css?family=Sigmar+One", :rel => "stylesheet", :type => "text/css"}/
@@ -11,12 +12,12 @@
   %body
     .container
       %header
-        %nav
+        %nav.big-nav
           .row
             = image_tag('logo-white.png', class: "logo")
             %ul.main-nav
               %li
-                =link_to "Innovate Home", "http://www.cybonito.com/"
+                =link_to "Innovate Home", "#"
               %li
                 = link_to "Rules", pages_rules_path
               %li
@@ -26,10 +27,31 @@
               -if user_signed_in?
                 %li
                   = link_to "Sign Out", destroy_user_session_path, method: :delete
-      .row
-        .col-md-3
-          %p.notice= notice
-          %p.alert= alert
-        .col-md-6.col-md-offset-3
+        .small-nav
+          %input#burger{:type => "checkbox"}/
+          %label{:for => "burger"}
+            %span
+            %span
+            %span
+          %nav.samll-nav-container
+            = image_tag('logo-white.png', class: "small-logo")
+            %ul
+              %li
+                =link_to "Innovate", "#"
+              %li
+                = link_to "Rules", pages_rules_path
+              %li
+                = link_to "Contact Us", pages_contact_path
+              %li
+                = link_to "Facebook", "#", id: "f"
+              -if user_signed_in?
+                %li
+                  = link_to "Sign Out", destroy_user_session_path, method: :delete
+
+      .row.timeline.timeline-margin
+        .col-xs-12
           = render 'pages/timeline'
+      .row.prompts.notice-margin
+        .col-xs-12
+          %p.notice= notice
       = yield
