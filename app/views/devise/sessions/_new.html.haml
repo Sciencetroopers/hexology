@@ -3,6 +3,7 @@
     .form-inputs
       = f.input :email, required: false, autofocus: true
       = f.input :password, required: false
-    .form-actions
-      = f.button :submit, "Let's Go!", class: "button sign-in-button"
+    .form-actions.row
+      .col-xs-offset-2.col-sm-offset-3
+        = f.button :submit, "Let's Go!", class: "button sign-in-button"
   -# = render "devise/shared/links"

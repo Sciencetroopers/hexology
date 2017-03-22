@@ -1,9 +1,9 @@
 - if user_signed_in?
   -@q_id = current_user.question_id
-  %span.glyphicon.glyphicon-chevron-left
+  %span.glyphicon.glyphicon-chevron-left#brackets
   - for i in 1..(@q_id-1)
-    %span.glyphicon.glyphicon-ok-circle
-  %span.glyphicon.glyphicon-remove-circle.colored-icon
+    %span.glyphicon.glyphicon-ok-circle#timeline-circles
+  %span.glyphicon.glyphicon-record.colored-icon#timeline-circles
   - for j in 1..(14-@q_id)
-    %span.glyphicon.glyphicon-remove-circle
-  %span.glyphicon.glyphicon-chevron-right
+    %span.glyphicon.glyphicon-record#timeline-circles
+  %span.glyphicon.glyphicon-chevron-right#brackets

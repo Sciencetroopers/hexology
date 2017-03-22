@@ -41,7 +41,7 @@
 
  /*-----------BUTTTONS------------------*/
 .button {
-  float: right !important;
+  // float: right !important;
 }
  .button:link,
  .button:visited,
@@ -62,6 +62,7 @@
     // margin-right: 30px;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
+    margin-left: 10px;
  }
 
  .button:hover,
@@ -174,9 +175,16 @@ h1 {
  /*-------------------------------------*/
 /* Welcome Page */
 /*-------------------------------------*/
+.info, .forms {
+  margin-bottom: 25px;
+}
 .hero-text-highlight {
   font-weight: 700;
   font-style: italic;
+}
+#heading {
+  text-align: center;
+  margin-bottom: 10px !important;
 }
 .hero-text {
   text-align: center;
@@ -244,7 +252,10 @@ h1 {
   color: #99173C;
 }
 .timeline {
-  font-size: 25px;
+  font-size: 30px;
+  #timeline-circles {
+    font-size: 25px;
+  }
 }
 
 /*-------------------------------------*/
@@ -378,6 +389,11 @@ h1 {
     margin-top: 90px;
     margin-bottom: 10px;
   }
+  .hero-button {
+    #sign-up-button, #sign-in-button {
+      font-size: 17px !important;
+    }
+  }
   h1 {
     text-align: center;
     margin-left: -35px;
@@ -438,7 +454,7 @@ h1 {
 @media screen and (min-width: 992px) {
   .small-nav {display: none;}
   .hero-text {
-    margin-left: 40px;
+    // margin-left: 40px;
   }
   .form-inputs {
     margin-bottom: 19px;

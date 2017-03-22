@@ -7,8 +7,8 @@
     = csrf_meta_tags
     %link{:href => "https://fonts.googleapis.com/css?family=Sigmar+One", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Ubuntu:400,700i", :rel => "stylesheet"}/
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
     .container
       %header
@@ -49,7 +49,7 @@
                   = link_to "Sign Out", destroy_user_session_path, method: :delete
 
       .row.timeline.timeline-margin
-        .col-xs-12
+        .col-xs-12.col-sm-12.col-md-12
           = render 'pages/timeline'
       .row.prompts.notice-margin
         .col-xs-12
