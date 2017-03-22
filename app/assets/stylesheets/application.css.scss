@@ -101,7 +101,7 @@ body {
     background-position: center;
 }
 
-.hero-text-box, .question, .contact, .rules, .winner {
+.hero-text-box, .question, .contact, .rules, .winner, .sign-up-form-page {
   padding-top: 1%;
   padding-bottom: 1%;
   background: rgba(0, 0, 0, 0.3);
@@ -189,6 +189,9 @@ h1 {
 .hero-text {
   text-align: center;
 }
+#sign-up-button {
+  margin-top: 10px !important;
+}
 /*-------------------------------------*/
 /* Questions Page */
 /*-------------------------------------*/
@@ -257,6 +260,19 @@ h1 {
     font-size: 25px;
   }
 }
+/*-------------------------------------*/
+/* Sign-Up Page */
+/*-------------------------------------*/
+.sign-up-back-button {
+  margin-left: 23px !important;
+}
+.sign-up-form-page {
+  .form-inputs {
+    .form-control:focus {
+      border-color: #99173C;
+      }
+    }
+  }
 
 /*-------------------------------------*/
 /* Burger Navigation */
