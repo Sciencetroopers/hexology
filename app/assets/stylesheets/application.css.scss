@@ -266,12 +266,8 @@ h1 {
 .sign-up-back-button {
   margin-left: 23px !important;
 }
-.sign-up-form-page {
-  .form-inputs {
-    .form-control:focus {
-      border-color: #99173C;
-      }
-    }
+.form-control:focus {
+  border-color: #99173C !important;
   }
 
 /*-------------------------------------*/
