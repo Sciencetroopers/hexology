@@ -38,9 +38,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'nokogiri'
-gem 'rack', '~> 2.0.1'
-gem 'rspec'
 
 gem 'devise', '~> 4.2'
 gem 'haml', '~> 4.0', '>= 4.0.7'
